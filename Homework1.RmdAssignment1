@@ -1,0 +1,51 @@
+---
+title: "tgpp lindell"
+output:
+  html_document: default
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_knit$set(root.dir = '../')
+```
+
+## ques 1 
+```{r}
+tgpp = read.csv("./data/tgpp.csv")
+
+names(tgpp)
+
+```
+
+## ques 2
+```{r}
+dim (tgpp)
+```
+
+## ques 3 
+```{r}
+class(tgpp)
+```
+
+## ques 4
+```{r}
+tgpp[c(1, 5, 8), c(3, 7, 10)]
+```
+
+## ques 5
+```{r}
+
+plot(tgpp$richness~tgpp$scale,xlab="scale",ylab="richness",col="blue")
+
+```
+## ques 6
+```{r}
+plot(tgpp$richness~tgpp$scale,xlab="scale",ylab="richness",col="blue", log="xy")
+```
+
+As you can see with the two different plots, you go from a logistic growth in the plot from question 5 to more of an exponential growth in the plot from question 6 when we included the the log function and set it equal to xy.
+
+
+
+
